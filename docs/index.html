@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RexaSub | استخراج و انتشار اشتراک</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      color: #eef2ff;
+      background: #081221;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, #2e4a7d 0%, #081221 45%, #02040a 100%);
+      line-height: 1.75;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+    .badge { display: inline-block; margin: 0 4px 12px 0; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); font-size: 0.9rem; }
+    .hero {
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.25);
+      margin-bottom: 30px;
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.6rem, 4vw, 4rem);
+      letter-spacing: -0.04em;
+    }
+    h2 { margin-top: 48px; font-size: 1.8rem; }
+    p { color: #d7dbf1; }
+    .highlight { color: #8fc7ff; }
+    .cards { display: grid; gap: 18px; margin-top: 24px; }
+    .card {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: #6ba6ff; }
+    .card-title { margin: 0 0 10px; font-size: 1.1rem; }
+    code { color: #ffe6a7; background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 8px; }
+    pre { background: rgba(255,255,255,0.06); border-radius: 16px; padding: 18px; overflow-x: auto; border: 1px solid rgba(255,255,255,0.08); }
+    .footer { padding: 32px 0 16px; color: #7f88b0; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">✨ NOVA.PROXY inspired</div>
+      <h1>RexaSub</h1>
+      <p>ابزاری برای استخراج خودکار لینک‌های <span class="highlight">VLESS / VMess</span> و تولید فایل اشتراک آماده‌ی استفاده. این پروژه راهکاری نوآورانه به سبک <strong>NOVA.PROXY</strong> ایجاد کرده است تا خروجی‌های قابل کپی و سازگار با همه پلتفرم‌ها تولید کند.</p>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">استخراج هوشمند</h3>
+          <p>خواندن محتوا از URL اشتراک، تشخیص مثال‌های متنی و Base64، یافتن host، add، sni و تبدیل به لینک‌های قابل استفاده.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">خروجی فارسی</h3>
+          <p>ساخت فایل خروجی با توضیحات فارسی و زمان ثبت در تهران تا کاربرها بتوانند بدون دردسر آن را استفاده کنند.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">انتشار خودکار</h3>
+          <p>اجرای هر دقیقه با GitHub Actions و ثبت تغییرات در مخزن برای دسترسی همیشگی.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>سازوکار جدید</h2>
+      <p>این پروژه از مدل نوآوری <strong>NOVA.PROXY</strong> یاد گرفته و یک سازوکار مبتنی بر سه گام ایجاد کرده است:</p>
+      <ul>
+        <li>خواندن و تحلیل محتوا از لینک اشتراک</li>
+        <li>استخراج عِناصری مثل <code>host</code>، <code>sni</code>، <code>add</code> و آی‌پی‌ها</li>
+        <li>ساختن خروجی کامل، قابل‌کپی و آماده برای استفاده در Hiddify، V2Ray، Clash و سایر اپ‌ها</li>
+      </ul>
+      <p>به جای انتشار فقط آی‌پی، این پروژه یک <strong>خروجی اشتراک پویا</strong> تولید می‌کند که پل ارتباطی بین لینک‌های خام و مصرف نهایی کاربران است.</p>
+    </section>
+
+    <section>
+      <h2>ویژگی‌های کلیدی</h2>
+      <div class="cards">
+        <div class="card">
+          <h3 class="card-title">سازگار با همه پلتفرم‌ها</h3>
+          <p>خروجی به فرمتی است که کاربران می‌توانند آن را کپی و در اپلیکیشن‌های مختلف قرار دهند.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">زمان دقیق در کنار هر خروجی</h3>
+          <p>هر لینک همراه با timestamp ثبت می‌شود تا کاربری و ردیابی آسان‌تر شود.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">ساختار منظم و فارسی</h3>
+          <p>تمام توضیحات، نظرات و راهنمایی‌ها به زبان فارسی نوشته شده است تا برای کاربران ایرانی مناسب باشد.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>چگونه از پروژه استفاده کنیم</h2>
+      <pre><code>git clone https://github.com/Rexa00/rexasub.git
+cd rexasub
+python scripts/fetch_ips.py
+</code></pre>
+      <p>برای اجرای خودکار در GitHub Actions، فایل workflow در مسیر <code>.github/workflows/fetch-ips.yml</code> موجود است.</p>
+    </section>
+
+    <section>
+      <h2>بازخورد و توسعه</h2>
+      <p>اگر دوست دارید، می‌توانیم سازوکار را گسترش دهیم تا خروجی‌های بیشتری مثل <strong>Clash YAML</strong> یا <strong>JSON ویژه</strong> تولید کند و صفحه مستندات را به یک داشبورد ساده تبدیل کنیم.</p>
+    </section>
+
+    <div class="footer">حالا یک صفحه توضیحی گرافیکی داریم که سازوکار «NOVA.PROXY الهام‌گرفته» را شرح می‌دهد. برای مشاهده فقط کافی‌ست فایل <strong>docs/index.html</strong> را باز کنید.</div>
+  </main>
+</body>
+</html>
